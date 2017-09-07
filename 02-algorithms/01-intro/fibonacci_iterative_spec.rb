@@ -20,4 +20,14 @@ RSpec.describe "fib" do
             expect(fib(2) + fib(3)).to eq(fib(4))
         end
     end
+    
+    
+    describe "print out first 9 values" do
+        it "gives the correct values for arguments 0 through 9" do
+            puts("")
+            (0..9).each do |i|
+                puts("fib(#{i}): #{fib(i)}")
+            end 
+        end 
+    end
 end
