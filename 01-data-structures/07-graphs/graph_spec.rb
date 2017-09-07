@@ -68,7 +68,7 @@ RSpec.describe Graph, type: Class do
             start_index = d_node.index
             end_index = r_node.index
             path = movie_graph.find_path(start_index, end_index)
-            even = true
+            #even = true
             #path.each do |node|
             #    if even
             #        puts(node.name)
