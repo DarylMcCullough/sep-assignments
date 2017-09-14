@@ -12,16 +12,14 @@ end
 
 fname = "linear_search_complexity.csv"
 
-delete = File.exists?(filename)
-
+if File.exists?(fname)
+    file = File.open(fname, "w")
+    file.puts("")
+    file.close()
+end
+file = File.open(fname, "a")
+    
 (0..10).each do |n|
-    if delete
-        file = File.open(fname, "w")
-        file.puts("")
-        file.close
-        delete = false
-        file = File.open(fname, "a")
-    end
     linear_search_complexity(n, file)
 end
 

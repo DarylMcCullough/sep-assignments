@@ -31,12 +31,35 @@ then the maximum depth is n.
 
 ### 4. In plain English, what is the bounded-case scenario for binary search?
 
+The worst case for binary search is `log_2(n)`. The best case is constant time (if the first item that you look at from the collection is the item you're
+looking for, then the search returns immediately). A function that is always between the worst case and best case is `log_2(n)/2`. But since multiplicative
+constants such as `1/2` are ignored in talking about complexity, we can say that the bounded case is the same as the worst case, `log_2(n)`.
 
 ### 5. Create a graph using the data below. Here's a CSV with the values you'll need.
-### What's the asymptotic limit as n approaches infinity for the function defined by the values above?
-    What is the Big-O of an algorithm that has the data points above?
-    Write a Ruby script that calculates and prints the N number, given an iteration, for linear search in the worst case (similar to the graph above).
-    Create a graph from the output using Google Sheets or other graphing software. Analyze the graph and denote its Big-O somewhere on the graph.
-    What is the Big-O of binary search?
-    What is the Big-Ω of binary search?
-    What is the Big-Ө of binary search?
+
+The graph is plotted in the file `/02-algorithms/04-complexity-intro/loglinear_intro.pdf`
+
+### 6. What's the asymptotic limit as n approaches infinity for the function defined by the values above?
+
+The values given follow the formula: `f(n) = 2^n`.
+
+### 7. What is the Big-O of an algorithm that has the data points above?
+
+If the graph is the number of steps required to get an output, as a function of the problem size, `n`,
+then the complexity is `O(2^n)`.
+
+### 8. Write a Ruby script that calculates and prints the N number, given an iteration, for linear search in the worst case (similar to the graph above).
+This is in `02-algorithms/04-complexity-intro/linear_complexity.rb`. The output is in the file `02-algorithms/04-complexity-intro/linea_complexity.csv`
+
+### 9. Create a graph from the output using Google Sheets or other graphing software. Analyze the graph and denote its Big-O somewhere on the graph.
+The graph is plotted in the file `/02-algorithms/04-complexity-intro/linear_search_complexity.pdf`.
+
+### 10. What is the Big-O of binary search?
+`Big-O(log_2(n))`
+
+### 11. What is the Big-Ω of binary search?
+
+`Big-Omega(1)`
+
+### 12. What is the Big-Ө of binary search?
+`Big-Theta(log_2(n))`
