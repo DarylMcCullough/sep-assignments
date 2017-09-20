@@ -41,7 +41,11 @@ The graph is plotted in the file `/02-algorithms/04-complexity-intro/loglinear_i
 
 ### 6. What's the asymptotic limit as n approaches infinity for the function defined by the values above?
 
-The values given follow the formula: `f(n) = 2^n`.
+The complexity is `O(2^n)`, which means that it grows without bound as `n --> infinity`. So it doesn't
+have any asymptotic limit. An asymptote to a function is a straight-line that the function approaches.
+For example, the function `1/x` approaches the straight line `g(x) = 0`. But for the function `2^n`, there
+is no asymptote as `n --> infinity`. (The function `2^n` has the asymptote `g(n) = 0` for `n --> - infinity`, but
+that's not meaningful, since `n` has to be nonnegative.)
 
 ### 7. What is the Big-O of an algorithm that has the data points above?
 
